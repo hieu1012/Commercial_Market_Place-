@@ -4,9 +4,9 @@ import  { useState, useEffect } from 'react';
 
 const { width } = Dimensions.get('window');
 const images = [
-  'https://sadesign.vn/wp-content/uploads/2021/04/chup-anh-giay-dep.jpg',
-  'https://c.pxhere.com/photos/e4/45/photo-70947.jpg!s2',
-  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2cR9a05mlJYHUyjD-K4MSq_hMX6_lf3Ii3nFMduq1TGRS-hyrR7ZiQ3Q8u2litOYisDY&usqp=CAU',
+  'https://file.hstatic.net/200000472237/file/chup-anh-quan-ao-dep-bang-dien-thoai_ed543464b2c248588df949f9618361f8_grande.jpg',
+  'https://vantaydecor.com/wp-content/uploads/2023/10/Thiet-ke-shop-quan-ao-nu-nho-dep-vua-tiet-kiem-khong-gian-vua-tang-suc-canh-tranh.jpg',
+  'https://vantaydecor.com/wp-content/uploads/2023/10/Noi-phu-hop-cho-cac-khach-hang-thich-phong-cach-Vintage.jpg',
 ];
 
 const AutoSlideShow = () => {
@@ -41,47 +41,30 @@ const AutoSlideShow = () => {
 const SanPham1 = [
   {
     id:'1',
-    title:'Shoe - MT1',
-    img: 'https://salt.tikicdn.com/cache/280x280/ts/product/8d/df/56/83aa3d4a7907a4e33641bf6115443322.jpg.webp',
-    price: '545$'
+    title:'Áo nữ thinks - Be - S',
+    img: 'https://m.yodycdn.com/products/atn4422-bee-2.jpg',
+    price: '$545000'
   },
     {
-    id:'1',
-    title:'Shoe - MT1',
-    img: 'https://salt.tikicdn.com/cache/280x280/ts/product/8d/df/56/83aa3d4a7907a4e33641bf6115443322.jpg.webp',
-    price: '545$'
+    id:'2',
+    title:'Áo Sơ Mi Nữ',
+    img: 'https://m.yodycdn.com/products/scn5056-xah1-yody-vn.jpg',
+    price: '$545000'
   },
     {
-    id:'1',
-    title:'Shoe - MT1',
-    img: 'https://salt.tikicdn.com/cache/280x280/ts/product/8d/df/56/83aa3d4a7907a4e33641bf6115443322.jpg.webp',
-    price: '545$'
+    id:'3',
+    title:'Váy nữ bèo tay bồng',
+    img: 'https://m.yodycdn.com/products/van5124-xng0.jpg',
+    price: '$545000'
   },
     {
-    id:'1',
+    id:'4',
     title:'Shoe - MT1',
     img: 'https://salt.tikicdn.com/cache/280x280/ts/product/8d/df/56/83aa3d4a7907a4e33641bf6115443322.jpg.webp',
     price: '545$'
   },  
-  {
-    id:'1',
-    title:'Shoe - MT1',
-    img: 'https://salt.tikicdn.com/cache/280x280/ts/product/8d/df/56/83aa3d4a7907a4e33641bf6115443322.jpg.webp',
-    price: '545$'
-  }, 
-  {
-    id:'1',
-    title:'Shoe - MT1',
-    img: 'https://salt.tikicdn.com/cache/280x280/ts/product/8d/df/56/83aa3d4a7907a4e33641bf6115443322.jpg.webp',
-    price: '545$'
-  }, 
-  {
-    id:'1',
-    title:'Shoe - MT1',
-    img: 'https://salt.tikicdn.com/cache/280x280/ts/product/8d/df/56/83aa3d4a7907a4e33641bf6115443322.jpg.webp',
-    price: '545$'
-  }, 
 ]
+
 const Item_SanPham1 = ({ obj }) => {
   return (
     <View style={{

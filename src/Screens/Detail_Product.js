@@ -1,65 +1,14 @@
-// import { Text, View, StyleSheet, Image , TouchableOpacity, Button, TextInputm,ScrollView,FlatList,TextInput} from 'react-native';
-// import {FontAwesome,AntDesign,Ionicons,MaterialIcons,MaterialCommunityIcons,Feather} from '@expo/vector-icons';
 
 
-// export default function Screen({navigation}){
-//   return(
-//     <View style={styles.container}>
-
-//     {/*------------------------ Content ------------------*/}
-//       <ScrollView 
-//         style={styles.scrollView}
-//         showsVerticalScrollIndicator={false} // Ẩn thanh cuộn dọc
-//       >
-
-//       </ScrollView>
-      
-//     {/*------------------ Footer -------------------*/}
-//       <View style={styles.footer}>
-
-//       </View>
-
-//     </View>
-    
-//   );
-
-// }
-
-// const styles=StyleSheet.create({
-//   container:{
-//     height: 750,
-//     width:392 ,
-//     // borderWidth:1,
-//   },
-//   scrollView: {
-//     width: "100%", // Đặt chiều rộng cố định
-//     height:'80%', // Đặt chiều cao cố định
-//     // borderWidth: 1, // Đường viền để dễ nhìn thấy container
-//     // borderColor: 'blue',
-//   },
-
-
-// // Foter---------------------------------------------
-//   footer:{
-//     height:'8%',
-//     width:'100%',
-//     // backgroundColor:'blue'
-//     borderTopWidth:0.5,
-//     borderColor:'rgb(207,208,212)',
-//     flexDirection:'row',
-//     alignItems:'center',
-//     justifyContent:'space-between',
-//     paddingHorizontal:10
-//   },
-
-// })
-
-import React from 'react';
 import { Text, View, StyleSheet, Image, ScrollView ,TouchableOpacity} from 'react-native';
+
+import { useSelector, useDispatch } from 'react-redux';
+import { addToCart } from '../redux/actions/index';
 
 export default function DetailScreen  ({ route })  {
   // Nhận thông tin sản phẩm từ tham số điều hướng
   const { product } = route.params;
+  const dispatch = useDispatch();
 
   return (
     <View style={styles.container}>
@@ -72,12 +21,13 @@ export default function DetailScreen  ({ route })  {
       </ScrollView>
       {/* Footer với nút Mua hàng và Thêm vào giỏ hàng */}
       <View style={styles.footer}>
-        <TouchableOpacity style={styles.button} >
+        <TouchableOpacity 
+          style={styles.button}
+          onPress={() => dispatch(addToCart(product))} 
+        >
           <Text style={styles.buttonText}>Add to cart</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button} >
-          <Text style={styles.buttonText}>Buy</Text>
-        </TouchableOpacity>
+
       </View>
     </View>
   );
